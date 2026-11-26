@@ -5,6 +5,7 @@ on:
 jobs:
   markdownlint:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 18
@@ -19,6 +20,7 @@ jobs:
             xargs -0 -r rumdl check --no-config --no-cache --enable MD046,MD070 --
   spellchecker:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
       - name: setup aspell
