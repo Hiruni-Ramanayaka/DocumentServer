@@ -1,5 +1,7 @@
 name: check
-on: [push]
+on:
+  workflow_dispatch:
+  "push":
 jobs:
   markdownlint:
     runs-on: ubuntu-latest
